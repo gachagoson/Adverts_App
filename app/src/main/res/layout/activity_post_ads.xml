@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Image Upload -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image"
+        android:contentDescription="ad_image" />
+
+    <!-- Image Upload Button -->
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image" />
+
+    <!-- Ad Name Input -->
+    <EditText
+        android:id="@+id/adNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Name"
+        android:inputType="text" />
+
+    <!-- Ad Location Input -->
+    <EditText
+        android:id="@+id/adLocationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Location"
+        android:inputType="text" />
+
+    <!-- Ad Price Input -->
+    <EditText
+        android:id="@+id/adPriceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Price"
+        android:inputType="numberDecimal" />
+
+    <!-- Ad Description Input -->
+    <EditText
+        android:id="@+id/adDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Description"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/adDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Date"
+        android:clickable="true"
+        android:onClick="showDatePickerDialog" />
+
+    <!-- Post Ad Button -->
+    <Button
+        android:id="@+id/postAdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Ad" />
+
+</LinearLayout>

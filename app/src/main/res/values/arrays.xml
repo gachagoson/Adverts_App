@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <array name="categories">
+            <item>Real Estate</item>
+            <item>Vehicles</item>
+            <item>Electronics</item>
+            <item>Jobs</item>
+            <item>Services</item>
+            <!-- Add more categories as needed -->
+        </array>
+
+        <string-array name="locations">
+            <item>New York</item>
+            <item>London</item>
+            <item>Paris</item>
+            <!-- Add more locations as needed -->
+        </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Blue Ads</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_location">Select Location</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="search_ads">Search ads</string>
+    <string name="search">Search</string>
+    <string name="item_1">Item 1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+
+</resources>

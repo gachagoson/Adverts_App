@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextName" type="id"/>
+    <item name="editTextLocation" type="id"/>
+    <item name="editTextPrice" type="id"/>
+    <item name="editTextDescription" type="id"/>
+    <item name="buttonPost" type="id"/>
+    <item name="textViewNoServices" type="id"/>
+    <item name="recyclerViewServices" type="id"/>
+</resources>
