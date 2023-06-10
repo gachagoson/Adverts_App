@@ -1,0 +1,154 @@
+<!-- item_product.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <!-- First Product -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProduct1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+
+        <!-- First Product -->
+        <LinearLayout
+            android:id="@+id/layoutProduct1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Product Image -->
+            <ImageView
+                android:id="@+id/imageProduct1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/textProductName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <!-- Product Location -->
+            <TextView
+                android:id="@+id/textProductLocation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Price -->
+            <TextView
+                android:id="@+id/textProductPrice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <!-- Product Contact -->
+            <TextView
+                android:id="@+id/textProductContact1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/textProductDescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Date Posted -->
+            <TextView
+                android:id="@+id/textProductDatePosted1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ... First product layout ... -->
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Second Product -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProduct2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+
+        <!-- Second Product -->
+        <LinearLayout
+            android:id="@+id/layoutProduct2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginTop="-8dp">
+
+            <!-- Product Image -->
+            <ImageView
+                android:id="@+id/imageProduct2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/textProductName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <!-- Product Location -->
+            <TextView
+                android:id="@+id/textProductLocation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Price -->
+            <TextView
+                android:id="@+id/textProductPrice2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <!-- Product Contact -->
+            <TextView
+                android:id="@+id/textProductContact2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/textProductDescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Product Date Posted -->
+            <TextView
+                android:id="@+id/textProductDatePosted2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ... Second product layout ... -->
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

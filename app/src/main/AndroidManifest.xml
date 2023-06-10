@@ -11,25 +11,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueAds"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ProductDetails"
+            android:exported="false" />
+
+        <activity
+            android:name=".PostProduct"
+            android:exported="false" />
+
         <activity
             android:name=".PostServiceActivity"
             android:exported="false" />
+
         <activity
             android:name=".AdsDetails"
             android:exported="false" />
+
         <activity
             android:name=".PostAdsActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Alibaba" />
+
     </application>
 
 </manifest>

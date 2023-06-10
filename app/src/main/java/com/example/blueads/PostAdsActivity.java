@@ -1,6 +1,7 @@
 package com.example.blueads;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -9,6 +10,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.Calendar;
 
 public class PostAdsActivity extends AppCompatActivity {
 
@@ -35,11 +38,13 @@ public class PostAdsActivity extends AppCompatActivity {
 
     private TextView adDateTextView;
     private Button postAdButton, upload_ad;
-
+    private DatePickerDialog.OnDateSetListener dateSetListener;
     private ImageView imageView;
     private Uri imageUri;
+    private TextView textViewDate;
     private DatabaseReference adsRef;
     private StorageReference storageRef;
+    private Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +63,25 @@ public class PostAdsActivity extends AppCompatActivity {
         adLocationEditText = findViewById(R.id.adLocationEditText);
         adPriceEditText = findViewById(R.id.adPriceEditText);
         adDescriptionEditText = findViewById(R.id.adDescriptionEditText);
-        adDateTextView = findViewById(R.id.adDateTextView);
+        adDateTextView = findViewById(R.id.textViewDate);
         postAdButton = findViewById(R.id.postAdButton);
+        textViewDate = findViewById(R.id.textViewDate);
         imageView = findViewById(R.id.imageView);
+
+        // Set current date as default date posted
+        calendar = Calendar.getInstance();
+        String currentDate = calendar.get(Calendar.DAY_OF_MONTH) + "-" +
+                (calendar.get(Calendar.MONTH) + 1) + "-" +
+                calendar.get(Calendar.YEAR);
+        textViewDate.setText("Date Posted: " + currentDate);
+
+        // Set click listener for date picker
+        textViewDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
 
         // Set a click listener for the Post Ad button
         postAdButton.setOnClickListener(new View.OnClickListener() {
@@ -193,6 +214,31 @@ public class PostAdsActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+    private void showDatePickerDialog() {
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                dateSetListener,
+                year,
+                month,
+                day
+        );
+        datePickerDialog.show();
+    }
+
+    // Listener for date picker dialog
+    private DatePickerDialog.OnDateSetListener getDateSetListener() {
+        return new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String selectedDate = dayOfMonth + "-" + (month + 1) + "-" + year;
+                textViewDate.setText("Date Posted: " + selectedDate);
+            }
+        };
     }
 
     public void onAdItemClick(View view) {

@@ -18,11 +18,11 @@ import com.example.blueads.fragments.Explore;
 import com.example.blueads.fragments.HomeFragment;
 import com.example.blueads.fragments.Plus;
 import com.example.blueads.fragments.ServiceFragment;
-import com.example.blueads.models.Service;
+import com.example.blueads.models.CartItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class Alibaba extends AppCompatActivity {
+public class Alibaba extends AppCompatActivity implements CartFragment.OnAddToCartListener{
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -31,11 +31,12 @@ public class Alibaba extends AppCompatActivity {
     private HomeFragment homeFragment;
     private Explore exploreFragment;
     private Plus plusFragment;
-
     private ServiceFragment serviceFragment;
     private CategoryFragment categoryFragment;
-    private CartFragment cartFragment;
+    private CartFragment cart;
     private AccountFragment accountFragment;
+
+    private CartFragment cartFragment;
 
     private int previousPosition = 0;
 
@@ -59,10 +60,12 @@ public class Alibaba extends AppCompatActivity {
         serviceFragment = new ServiceFragment();
         plusFragment = new Plus();
         categoryFragment = new CategoryFragment();
-        cartFragment = new CartFragment();
+        cart = new CartFragment();
         accountFragment = new AccountFragment();
 
-        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
+
+        cartFragment = cart; // Use the existing "cart" instance instead of creating a new one
+        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), cartFragment);
         viewPager.setAdapter(adapter);
 
         // Set a listener to detect when the account fragment is selected
@@ -107,11 +110,18 @@ public class Alibaba extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onAddToCart(CartItem item) {
+
+    }
+
     private class MyPagerAdapter extends FragmentPagerAdapter {
         private final int NUM_PAGES = 5;
+        private CartFragment cartFragment;
 
-        public MyPagerAdapter(FragmentManager fm) {
+        public MyPagerAdapter(FragmentManager fm, CartFragment cartFragment) {
             super(fm);
+            this.cartFragment = cartFragment;
         }
 
         @Override

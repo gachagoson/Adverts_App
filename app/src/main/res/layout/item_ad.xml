@@ -2,15 +2,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#D6D3D3"
+    android:background="#FDFCFC"
     android:orientation="horizontal"
     android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
+        android:id="@+id/cardview1"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
         android:padding="8dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
@@ -32,17 +35,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+                android:textColor="@color/purple_700"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/adLocationTextView1"
                 android:layout_width="match_parent"
+                android:textColor="@color/purple_700"
                 android:layout_height="wrap_content"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/adPriceTextView1"
                 android:layout_width="match_parent"
+                android:textColor="@color/purple_700"
                 android:layout_height="wrap_content"
                 android:textSize="14sp" />
 
@@ -50,21 +56,25 @@
                 android:id="@+id/adDescriptionTextView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/purple_700"
                 android:textSize="14sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <View
-        android:layout_width="1dp"
+        android:layout_width="7dp"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray" />
+        android:background="@color/purple_700" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:id="@+id/cardview2"
         android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
         android:padding="8dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
@@ -85,6 +95,7 @@
             <TextView
                 android:id="@+id/adNameTextView2"
                 android:layout_width="match_parent"
+                android:textColor="@color/purple_700"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -93,18 +104,21 @@
                 android:id="@+id/adLocationTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/purple_700"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/adPriceTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/purple_700"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/adDescriptionTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/purple_700"
                 android:textSize="14sp" />
 
         </LinearLayout>

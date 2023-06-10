@@ -226,8 +226,8 @@
             android:padding="8dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/service"
                 android:src="@drawable/service" />
 
@@ -249,12 +249,13 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:id="@+id/product"
                 android:src="@drawable/manage_ad" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ads Setting" />
+                android:text="Add Product" />
 
         </LinearLayout>
 

@@ -14,12 +14,13 @@ import androidx.fragment.app.Fragment;
 import com.example.blueads.Alibaba;
 import com.example.blueads.MainActivity;
 import com.example.blueads.PostAdsActivity;
+import com.example.blueads.PostProduct;
 import com.example.blueads.PostServiceActivity;
 import com.example.blueads.R;
 
 public class MyOrders extends Fragment {
 
-    ImageView imageView, Imageview1;
+    ImageView imageView, Imageview1,Imageview2;
 
     public MyOrders() {
         // Required empty public constructor
@@ -44,6 +45,15 @@ public class MyOrders extends Fragment {
             }
         });
 
+        ImageView imageView2 = linearLayout.findViewById(R.id.product);
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open the Post Ads page
+                Intent intent = new Intent(getActivity(), PostProduct.class);
+                startActivity(intent);
+            }
+        });
         ImageView imageView1 = linearLayout.findViewById(R.id.service);
 
         imageView1.setOnClickListener(new View.OnClickListener() {

@@ -52,12 +52,11 @@
         android:inputType="textMultiLine" />
 
     <TextView
-        android:id="@+id/adDateTextView"
+        android:id="@+id/textViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ad Date"
-        android:clickable="true"
-        android:onClick="showDatePickerDialog" />
+        android:text="Date Posted: "
+        android:paddingTop="16dp" />
 
     <!-- Post Ad Button -->
     <Button

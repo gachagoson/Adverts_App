@@ -1,0 +1,21 @@
+<!-- fragment_service.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewNoServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No services"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/textViewNoServices" />
+
+</RelativeLayout>
